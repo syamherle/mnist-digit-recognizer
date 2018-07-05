@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digit Recognizer</title>
+	
+	<link rel="stylesheet" type="text/css" href="static/landing.css">
+	<script src="{{url_for('static', filename='jquery-3.3.1.min.js') }}" type="text/javascript"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='draw.js') }}"></script>
+</head>
+<body">
+
+<div class="container containerDiv left">
+	
+  <div class="header containerDiv left">
+    <h4 class="left">
+    Digit Recognizer
+    </h4>
+  </div>
+  <div class="content containerDiv left">
+   <p style="padding: 5px 5px;margin: 5px 10px;">
+    Please draw digit to recognize.
+    </p>
+    <div align="center" class="painterHolder left">
+    	<canvas id="main"></canvas>
+        <canvas id="input" style="border:1px solid" width="140" height="140"></canvas>
+        <br /><br />
+        
+        <div class="paintTool right">
+	         <button id="clear" class="btn btn-default" style="width:100px;height: 20px;">clear</button>
+        </div>
+
+    </div>
+
+    <div class="right outputDivClass" id="outputDiv" style="display: none">
+    	<p> The predicted digit is  <span id='outputSoln'></span></p> 
+    <div>
+    
+  </div>
+	
+</div>
+
+</body>
+</html>
